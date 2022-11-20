@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="first.css">
+    <script src="myscripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body> 
+    <p style="padding-left: 35px; padding-top: 20px;"><i class="fa fa-angle-down" style="color: white;" ></i></p>
+    <div class="options">
+        <i class="fa fa-ellipsis-v" style="color: white; "></i>
+    </div>
+     
+    
+    <div style="text-align:center; padding-top: 50px; color: rgb(255, 255, 255);">
+        PLAYING FROM PLAYLIST<br>
+      </div>
+      <div style="text-align:center; padding-top: 8px; color: rgb(255, 255, 255);">
+        <b>Dreamland</b>
+      </div>
+    <div style="text-align: center; padding-top: 25px;">
+    <img src="heat_waves.jpg" alt="heat waves" width="200" height="200" ">
+        </div>
+    <h4 style="color: white; padding-left: 50px; padding-top: 30px; font-size: x-large;">Heat Waves</h4>
+    <div class="options"><i class="fa fa-heart fav" style="color: white; "></i></div>
+    <p style="color: white; padding-left: 50px;">Glass Animals</p>
+    <p style="text-align: center;"><input id="dur" type="range" name="rng" min="0" step="0.25" value="0" onchange="mSet()" style="width: 1000px">
+       <script>
+            var aud= document.getElementById('aud')
+            var dur= document.getElementById('dur')
+            function mDur(){dur.max= audio.duration};
+            function mPlay(){dur.value=audio.currentTime};
+            function mSet(){
+                audio.currentTime=dur.value
+            };
+            </script></p>
+    <br><p style="text-align: center; color: white;"><i class="fa fa-step-backward" style="padding-right: 40px;"></i></h7><button id="btn" onclick="fnc;"><i class="fa fa-play-circle" i="icon"></i></h7></button><i class="fa fa-step-forward" style="padding-left: 40px;"></i></h7></p>
+
+        <script type="text/javascript">
+            btn.onclick=function(){
+                if(audio.paused){
+                    audio.play(); 
+                
+                }
+                else{
+                    audio.pause();
+                }
+                
+            }
+            const audio=new Audio();
+            audio.src="Heat-Waves_audio.mp3";
+        </script>
+    
+        
+</body>
+</html>
